@@ -9,9 +9,11 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class Application {
     public static void main(String[] args) {
+        // 加载xml配置
         ApplicationContext context =
                 new ClassPathXmlApplicationContext("classpath:application.xml");
 
+        // IOC获取Bean
         TestBeanService testBeanService = context.getBean(TestBeanService.class);
 
         System.out.println(testBeanService.getBean());
